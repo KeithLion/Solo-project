@@ -9,9 +9,9 @@ def login():
     return render_template('login.html')
 
 
-@app.route('/onePlayer')
-def one_player():
-    return render_template('one_player.html')
+@app.route('/addPlayer')
+def add_player():
+    return render_template('add_player.html')
 
 
 @app.route('/updatePlayer')
