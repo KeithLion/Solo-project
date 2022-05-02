@@ -10,20 +10,27 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+        <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='add_player.css')}}"
+    />
     <title>Document</title>
   </head>
   <body>
-    <h1>Add player</h1>
-    <form action="">
-            <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Name</label>
+    <h1 class="align-center">Add player</h1>
+    <div class="container">
+
+      <div class="mb-3 ">
+      <form action="/savePlayer" method="post">
+        <label for="formGroupExampleInput" class="form-label"></label>
         <input
           type="text"
           class="form-control"
           id="formGroupExampleInput"
-          placeholder=""
+          placeholder="Character Name"
+          name="name"
         />
-<select class="form-select" aria-label="Default select example">
+<!-- <select class="form-select" aria-label="Default select example">
   <option selected>Choose your class</option>
   <option value="1">Barbarian</option>
   <option value="2">Bard</option>
@@ -37,18 +44,51 @@
   <option value="10">Sorcerer</option>
   <option value="11">Warlock</option>
   <option value="12">Wizard</option>
-</select>
-    </form>
-    <div>
+</select> -->
+
+
       <ul>
-        <p>base stats</p>
-        <li>1: Strength</li>
-        <li>2: Dexterity</li>
-        <li>3: Constitution</li>
-        <li>4: Wisdom</li>
-        <li>5: Intelligence</li>
-        <li>6: Charisma</li>
-      </ul>
-    </div>
+        <h3 class="align-center">Base Stats</h3>
+
+          <div>
+            <label for="">Strength</label>
+            <input class="input" type="number" max="20" min="1" name="strength">
+          </div>
+          <div>
+            <label for="">Dexterity</label>
+            <input class="input" type="number" max="20" min="1" name="dexterity">
+          </div>
+                    <div>
+            <label for="">Constitution</label>
+            <input class="input" type="number" max="20" min="1" name="constitution">
+          </div>
+                    <div>
+            <label for="">Wisdom</label>
+            <input class="input" type="number" max="20" min="1" name="wisdom">
+          </div>
+                    <div>
+            <label for="">Intelligence</label>
+            <input class="input" type="number" max="20" min="1" name="intelligence">
+          </div>
+          <div>
+            <label for="">Charisma</label>
+            <input class="input" type="number" max="20" min="1" name="charisma">
+          </div>
+
+          <div class="campaigns">
+
+    <select class="form-select" aria-label="Default select example" name="party_id">
+        <option selected>Choose your campaign</option>
+        {% for p in parties %}
+        <option value="{{p.parties_id}}">{{p.title}}</option>
+        {% endfor %}
+    </select>
+
+          </div>
+<button type="submit" class="btn btn-secondary">Join</button>
+</ul>
+</form>
+<a href="/">Home</a>
+  </div>
   </body>
 </html>

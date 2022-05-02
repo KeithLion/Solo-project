@@ -1,13 +1,23 @@
 img{
     max-width: 1000px;
     max-height: 600px;
+    margin-left: 120px;
 }
 
 .create{
     position: absolute;
-    top: 50%;
+    top: 25%;
     bottom: 50%;
     color: white;
-    /* left: 50%;
-    right: 50%; */
+    left: 44%;
+    right: 50%;
+}
+
+.width{
+    width: 190px;
+}
+
+.description{
+    width: 263px;
+    height: 81px;
 }

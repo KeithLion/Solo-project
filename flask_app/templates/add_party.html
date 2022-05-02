@@ -22,19 +22,21 @@
           <div class="create">
 
               <h1>Create Your Campaign</h1>
-              <form action="">
+              <form action="/saveCampaign" method="post">
                   <div class="mb-3">
                       <label for="formGroupExampleInput2" class="form-label">Title</label>
                       <input
                       type="text"
-                      class="form-control"
+                      class="form-control, width"
                       id="formGroupExampleInput2"
                       placeholder=""
+                      name="title"
                       />
                       <div>
-                          <label for=""></label>
-                          <input type="text" name="" id="">
+                          <label for="description">What's the Story?</label>
+                          <input class="description" type="text" name="description" id="description">
                         </div>
+                        <button type="submit" class="btn btn-secondary">Create</button>
                     </form>
                 </div>
 </div>

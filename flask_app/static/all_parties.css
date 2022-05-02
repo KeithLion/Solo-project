@@ -2,11 +2,20 @@
     border: 2px solid black;
     width: 500px;
     height: 160px;
+    margin-top: 30px;
     margin-left: 377px;
     margin-bottom: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
 body{
     text-align: center;
+}
+
+.oneCampaign{
+text-align: center;
 }
 
 .header{
@@ -14,4 +23,7 @@ body{
     justify-content: space-evenly;
     align-items: center;
     margin-right: 298px;
+}
+.join{
+    text-align: center;
 }

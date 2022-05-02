@@ -1,0 +1,15 @@
+.party{
+    border: 2px solid black;
+    text-align: center;
+    max-width: 650px;
+    margin-left: 300px;
+    margin-top: 30px;
+}
+h1{
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    margin-right: 45px;
+}

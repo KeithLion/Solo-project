@@ -8,17 +8,30 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='all_parties.css')}}"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <title>Document</title>
   </head>
   <body>
     <div class="header">
-      <button>Add Campaign</button>
+      <a class="btn btn-primary" href="/addParty" role="button">Add Campaign</a>
       <h1>All open Campaigns</h1>
     </div>
-    <div class="container"></div>
+    <div class="container">
+      {% for o in open %}
+      <div class="oneCampaign">
+        <a href="/oneParty/{{o.parties_id}}">{{o.title}}</a>
+        <p>{{o.description}}</p>
+      </div>
+      {% endfor %}
+    </div>
     <div class="join">
-      <header>Join a campaign</header>
-      <button>Join</button>
+      <h3>Join a campaign</h3>
+      <a class="btn btn-primary" href="/addPlayer" role="button">Join</a>
     </div>
   </body>
 </html>
